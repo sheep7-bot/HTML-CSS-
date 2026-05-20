@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS盒子模型演示</title>
+    <style>
+        /* 全局样式初始化 */
+        * {
+            /* 清除所有标签默认外边距 */
+            margin: 0;
+            /* 清除所有标签默认内边距 */
+            padding: 0;
+            /* 标准盒子模型：宽高包含内边距+边框 */
+            box-sizing: border-box;
+            /* 统一设置字体为宋体 */
+            font-family: "SimSun", "宋体", serif;
+        }
+
+        /* 父容器盒子 */
+        .box {
+            /* 1. 内容区域宽高  content */
+            width: 350px;
+            height: 200px;
+
+            /* 2. 内边距 padding：内容和边框之间的距离 上下左右20px */
+            padding: 20px;
+
+            /* 3. 边框 border：盒子的边线 粗细 样式 颜色 */
+            border: 4px solid #2266cc;
+
+            /* 4. 外边距 margin：盒子和外面其他元素的距离 */
+            margin: 60px auto; /* 上下60px 左右自动居中 */
+
+            /* 盒子背景颜色 */
+            background-color: #f0f7ff;
+
+            /* 文字大小 */
+            font-size: 18px;
+        }
+
+        /* 单独设置文字样式 */
+        .box-text {
+            line-height: 30px; /* 行高 */
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- 盒子结构 -->
+    <div class="box">
+        <p class="box-text">
+            盒子模型四部分：<br>
+            1.内容 content：存放文字图片<br>
+            2.内边距 padding：内容到边框距离<br>
+            3.边框 border：盒子边线<br>
+            4.外边距 margin：盒子与外界距离
+        </p>
+    </div>
+</body>
+</html>

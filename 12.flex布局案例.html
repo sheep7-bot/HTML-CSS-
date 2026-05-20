@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex弹性布局案例</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* 统一盒模型 */
+            box-sizing: border-box;
+            font-family: "宋体",SimSun;
+        }
+        body {
+            padding: 50px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* ========== 1.父容器：开启Flex布局 ========== */
+        .flex-box {
+            /* 开启弹性布局 子元素自动变为弹性项目 */
+            display: flex;
+            /* 主轴对齐方式：两端对齐 两边贴边 中间平分 */
+            justify-content: space-between;
+            /* 交叉轴对齐：垂直居中 */
+            align-items: center;
+            /* 自动换行 盒子太多自动往下排 */
+            flex-wrap: wrap;
+            /* 设置父盒子宽高 */
+            width: 800px;
+            height: 200px;
+            border: 2px solid #333;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* ========== 2.子元素：弹性项目 ========== */
+        .item {
+            width: 150px;
+            height: 120px;
+            line-height: 120px;
+            text-align: center;
+            font-size: 20px;
+            color: #fff;
+            border-radius: 6px;
+        }
+        /* 给三个盒子设置不同背景色区分 */
+        .item1 {
+            background-color: #1677ff;
+        }
+        .item2 {
+            background-color: #52c41a;
+        }
+        .item3 {
+            background-color: #ff7875;
+        }
+    </style>
+</head>
+<body>
+    <h2>Flex 弹性布局演示</h2>
+
+    <!-- Flex父容器 -->
+    <div class="flex-box">
+        <!-- 子弹性项目 -->
+        <div class="item item1">盒子1</div>
+        <div class="item item2">盒子2</div>
+        <div class="item item3">盒子3</div>
+    </div>
+</body>
+</html>

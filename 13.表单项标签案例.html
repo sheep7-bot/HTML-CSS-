@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>表单标签案例</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "宋体", SimSun;
+        }
+        /* 整体表单居中 */
+        form {
+            width: 450px;
+            margin: 50px auto;
+            border: 1px solid #999;
+            padding: 30px;
+            border-radius: 5px;
+        }
+        h3 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        /* 每一行表单项 */
+        .row {
+            margin: 15px 0;
+        }
+        label {
+            display: inline-block;
+            width: 90px;
+        }
+        input,select,textarea {
+            padding: 5px;
+        }
+        /* 按钮样式 */
+        .btn {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            padding: 6px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- form 表单标签：所有表单内容写在里面 -->
+    <!-- action：提交地址  #代表提交当前页面 -->
+    <!-- method：提交方式 get/post -->
+    <form action="#" method="get">
+        <h3>用户信息表单</h3>
+
+        <!-- 1.单行文本输入框 text -->
+        <div class="row">
+            <label>用户名：</label>
+            <input type="text" name="username" placeholder="请输入用户名">
+        </div>
+
+        <!-- 2.密码框 password -->
+        <div class="row">
+            <label>密　码：</label>
+            <input type="password" name="pwd" placeholder="请输入密码">
+        </div>
+
+        <!-- 3.单选框 radio 同一组name必须相同 -->
+        <div class="row">
+            <label>性　别：</label>
+            <input type="radio" name="sex" value="男" checked>男
+            <input type="radio" name="sex" value="女">女
+        </div>
+
+        <!-- 4.复选框 checkbox -->
+        <div class="row">
+            <label>爱　好：</label>
+            <input type="checkbox" name="hobby" value="游戏">游戏
+            <input type="checkbox" name="hobby" value="看书">看书
+            <input type="checkbox" name="hobby" value="运动">运动
+        </div>
+
+        <!-- 5.下拉选择框 select+option -->
+        <div class="row">
+            <label>学　历：</label>
+            <select name="edu">
+                <option value="">请选择</option>
+                <option value="大专">大专</option>
+                <option value="本科">本科</option>
+                <option value="研究生">研究生</option>
+            </select>
+        </div>
+
+        <!-- 6.多行文本域 textarea -->
+        <div class="row">
+            <label>备　注：</label>
+            <textarea name="info" rows="3" cols="25"></textarea>
+        </div>
+
+        <!-- 7.提交按钮 重置按钮 -->
+        <div class="btn">
+            <button type="submit">提交表单</button>
+            <button type="reset">重置清空</button>
+        </div>
+    </form>
+</body>
+</html>

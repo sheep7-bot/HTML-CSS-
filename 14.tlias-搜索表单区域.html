@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>tlias 智能学习辅助系统</title>
+    <style>
+        /* 全局样式重置：清除浏览器默认边距 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ========================
+           顶部导航栏容器（Flex 父容器）
+           ======================== */
+        .header {
+            /* 开启 Flex 布局 → 让子元素（标题+按钮）自动变成弹性项目 */
+            display: flex;
+
+            /* 主轴对齐：左右两端分布
+               左边：标题
+               右边：退出按钮
+               中间自动留白 */
+            justify-content: space-between;
+
+            /* 交叉轴对齐：垂直居中
+               让标题和按钮在垂直方向居中对齐 */
+            align-items: center;
+
+            /* 背景色：灰色（和你截图一致） */
+            background-color: #cccccc;
+
+            /* 上下内边距15px，左右内边距30px */
+            padding: 15px 30px;
+        }
+
+        /* 左侧系统标题样式 */
+        .header-title {
+            /* 文字颜色：白色 */
+            color: #fff;
+            /* 字体大小 */
+            font-size: 24px;
+            /* 字体粗细：正常 */
+            font-weight: normal;
+            /* 给整个导航栏设置字体为宋体，兼容不同系统 */
+            font-family: "SimSun", "宋体", serif;
+        }
+
+        /* 右侧退出登录按钮 */
+        .logout-btn {
+            /* 按钮背景色和导航栏保持一致 */
+            background-color: #cccccc;
+            /* 文字白色 */
+            color: #fff;
+            /* 边框：1px 白色实线 */
+            border: 1px solid #fff;
+            /* 内边距：让按钮更大更好看 */
+            padding: 6px 12px;
+            /* 鼠标悬浮变成小手 */
+            cursor: pointer;
+            /* 字体大小 */
+            font-size: 16px;
+        }
+
+
+
+       /* 搜索表单布局样式 */
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.form-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+    </style>
+</head>
+<body>
+
+
+    <!-- 顶部导航栏：Flex 容器 -->
+    <div class="header">
+        <!-- 左侧标题：Flex 子项目 -->
+        <h2 class="header-title">tlias 智能学习辅助系统</h2>
+        <!-- 右侧按钮：Flex 子项目 -->
+        <button class="logout-btn">退出登录</button>
+    </div>
+
+
+    
+   <!-- 搜索表单区域 -->
+<form class="search-form" action="/search" method="post">
+    <!-- 姓名输入框 -->
+    <div class="form-item">
+        <label>姓名</label>
+        <input type="text" placeholder="请输入员工姓名">
+    </div>
+
+    <!-- 性别下拉框 -->
+    <div class="form-item">
+        <label>性别</label>
+        <select>
+            <option value="">请选择</option>
+            <option value="1">男</option>
+            <option value="2">女</option>
+        </select>
+    </div>
+
+    <!-- 职位下拉框 -->
+    <div class="form-item">
+        <label>职位</label>
+        <select>
+            <option value="">请选择</option>
+            <option>班主任</option>
+            <option>讲师</option>
+            <option>学工主管</option>
+            <option>教研主管</option>
+            <option>咨询师</option>
+        </select>
+    </div>
+
+    <!-- 操作按钮 -->
+    <button type="submit" class="btn-search">查询</button>
+    <button type="reset" class="btn-reset">清空</button>
+</form>
+
+
+</body>
+</html>
